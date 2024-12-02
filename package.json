@@ -1,11 +1,11 @@
 {
-  "name": "local-command-server",
+  "name": "mcp-local-command-server",
   "version": "0.1.0",
   "description": "A Model Context Protocol server",
   "private": true,
   "type": "module",
   "bin": {
-    "local-command-server": "./build/index.js"
+    "mcp-local-command-server": "./build/index.js"
   },
   "files": [
     "build"

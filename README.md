@@ -1,29 +1,14 @@
 # local-command-server MCP Server
 
-A Model Context Protocol server
-
-This is a TypeScript-based MCP server that implements a simple notes system. It demonstrates core MCP concepts by providing:
-
-- Resources representing text notes with URIs and metadata
-- Tools for creating new notes
-- Prompts for generating summaries of notes
+This is a TypeScript-based MCP server that executes commands and returns structured outputs. 
 
 ## Features
 
-### Resources
-- List and access notes via `note://` URIs
-- Each note has a title, content and metadata
-- Plain text mime type for simple content access
-
 ### Tools
-- `create_note` - Create new text notes
-  - Takes title and content as required parameters
-  - Stores note in server state
 
-### Prompts
-- `summarize_notes` - Generate a summary of all stored notes
-  - Includes all note contents as embedded resources
-  - Returns structured prompt for LLM summarization
+- `execute_command` - Execute a command and return structured output
+  - Takes a `command` as a required parameter
+  - Returns structured output from the command
 
 ## Development
 
@@ -53,7 +38,7 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 {
   "mcpServers": {
     "local-command-server": {
-      "command": "/path/to/local-command-server/build/index.js"
+      "command": "/path/to/mcp-local-command-server/build/index.js"
     }
   }
 }
@@ -68,3 +53,11 @@ npm run inspector
 ```
 
 The Inspector will provide a URL to access debugging tools in your browser.
+
+## License
+
+MIT
+
+## Author
+
+- [@kentaro](https://github.com/kentaro)
